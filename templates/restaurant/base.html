@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swad Gazzabko</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'restaurant/css/mystyle.css' %}">
+</head>
+<body>
+    <header>
+        <nav id = "header-nav" class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="#" class="pull-left visible-md visible-lg">
+                        <div class="logo-img"></div>
+                    </a>
+                    <div class="navbar-brand">
+                        <a href="#"><h1>Swad Gazzabko</h1></a>
+                        <p>
+                            <img src="{% static 'restaurant/images/star-k-logo.png' %}" alt="Star Logo">
+                            <span>Authentic Cuisine</span>
+                        </p>
+                    </div>
+
+                    <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div id="collapsable-nav" class="collapse navbar-collapse">
+                    <ul id="nav-list" class="nav navbar-nav navbar-right">
+                        <li class="visible-xs active">
+                            <a href="#"><span class="glyphicon glyphicon-home"></span>Home</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs">Menu</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs">About</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs">Awards</a>
+                        </li>
+                        <li id="phone" class="hidden-xs">
+                            <a href="tel:+91-9986276146"><span>+91-9986276146</span></a>
+                            <div>* We Deliver</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="call-btn" class="visible-xs">
+        <a class="btn" href="tel:+919986276146"><span class="glyphicon glyphicon-earphone"></span>+91-9986276146</a>
+    </div>
+    <div id="xs-deliver" class="text-center visible-xs">* We Deliver</div>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer class="panel-footer">
+        <div class="container">
+            <div class="row">
+                <section id="hours" class="col-sm-4">
+                    <span>Hours:</span><br>
+                      Sun-Thurs: 11:15am - 10:00pm<br>
+                      Fri: 11:15am - 2:30pm<br>
+                      Saturday Closed
+                    <hr class="visible-xs">
+                </section>
+
+                <section id="address" class="col-sm-4">
+                    <span>Address:</span><br>
+                      7105 Reisterstown Road<br>
+                      Baltimore, MD 21215
+                      <p>* Delivery area within 3-4 miles, with minimum order of $20 plus $3 charge for all deliveries.</p>
+                    <hr class="visible-xs">
+                 </section>
+
+                <section id="testimonials" class="col-sm-4">
+                  <p>"The best Chinese restaurant I've been to! And that's saying a lot, since I've been to many!"</p>
+                  <p>"Amazing food! Great service! Couldn't ask for more! I'll be back again and again!"</p>
+                </section>
+            </div>
+            <div class="text-center">&copy; Copyright Swad Gazzabko</div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
